@@ -191,6 +191,41 @@ db.Flush();
 
 ---
 
+## 🌋 **Why ShroomDB Exists**
+
+ShroomDB wasn’t born out of academic theory, a whitepaper, or a committee of enterprise architects.  
+It exists because I needed it.
+
+While building a **non‑distributed, “secure‑enough (at your own risk 😄)” ledger system**, I ran into a very real problem:
+
+I needed a storage engine that could:
+
+- live in a single file  
+- store thousands of tiny independent records  
+- grow organically  
+- avoid wasting space  
+- be deterministic enough to hash the entire state  
+- be simple enough to audit  
+- be compact enough to embed anywhere  
+- and not drag in a full database just to store a few kilobytes of metadata  
+
+Nothing out there fit the bill.
+
+Traditional databases were too heavy.  
+Key‑value stores were too coarse.  
+Filesystems were too rigid.  
+And rolling my own ad‑hoc format felt like a trap.
+
+So ShroomDB emerged — a tiny, page‑based, segment‑linked storage layer inspired by the way **mycelium** spreads underground: efficiently, compactly, and with minimal overhead.
+
+It’s not meant to replace your production database.  
+It’s not meant to secure billions of dollars.  
+It’s meant to be **practical**, **predictable**, and **pleasant** for projects that need a lightweight, deterministic storage core.
+
+If you need a compact, single‑file, variable‑segment storage engine for your own experiments, embedded systems, or “secure‑enough” ledgers…  
+ShroomDB might just grow on you.
+
+---
 ## 🍄 **Contributing**
 
 Pull requests welcome.  
