@@ -5,8 +5,8 @@ namespace ShroomDB_Tester
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Shroom shroom = new Shroom(new ShroomOptions(1000), "test.shroom");
+            var verstion = ShroomOptions.LastVersion;
+            Shroom shroom = new Shroom(new ShroomOptions(1000, verstion), "test.shroom");
         }
     }
 }
