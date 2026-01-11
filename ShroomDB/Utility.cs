@@ -43,6 +43,20 @@ namespace ShroomDB
                 value = (byte)(value ^ (1 << bit));
             }
         }
+        public static class SegmentFlagsUtility
+        {
+            public static Dictionary<FlagSemantics, bool> ByteToSemantics(byte value)
+            {
+                Dictionary<FlagSemantics, bool> result = new Dictionary<FlagSemantics, bool>();
 
+                foreach(FlagSemantics f in Enum.GetValues(typeof(FlagSemantics)))
+                {
+                    result.Add(f, BitFlags.GetBit(value, (int)f));
+                }
+
+                return result;
+            }
+            //todo continue other relevant methods
+        }
     }
 }
